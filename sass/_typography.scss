@@ -1,0 +1,109 @@
+/* links */
+a {
+	color:$dark-color;
+	text-decoration:none;
+	transition:0.3s color, 0.3s background-color, 0.3s border;
+	&:hover {
+		color:$accent-color;
+	}
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h5 {
+	margin:0;
+	color:$dark-color;
+}
+
+h2 {
+	font-size:35px;
+}
+
+h3 {
+	font-size:25px;
+}
+
+/* paragraphs */
+
+p {
+	line-height: 1.5;
+	margin-top:0;
+	margin-bottom:10px;
+}
+
+/*blockquotes*/
+
+blockquote {
+	background: $light-color;
+	margin: 0;
+	padding: 20px;
+	p {
+		margin-top: 0;
+	}
+}
+
+/*tables*/
+
+table {
+	td {
+		padding: 10px;
+	}
+	tr td:first {
+		padding-right: 0;
+	}
+}
+
+/*def lists*/
+
+dt {
+	font-weight: 600;
+	padding-bottom: 5px;
+}
+
+dd {
+	padding: 10px;
+	margin-left: 10px;
+}
+
+/*PRE*/
+
+pre {
+	background: $light-color;
+	padding: 10px;
+	border-radius: 4px;
+	font-family:$font-stack;
+}
+
+
+/*
+====================================
+Global Classes / Wordpress Specific
+====================================
+*/
+
+.aligncenter {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+img {
+	&.alignleft {
+		padding-right: 5px;
+	}
+	&.alignright {
+		padding-left: 5px;
+	}
+}
+
+.clear {
+	width: 100%;
+	float: left;
+	clear: both;
+}
