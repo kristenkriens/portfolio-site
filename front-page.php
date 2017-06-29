@@ -8,11 +8,11 @@
   <section class="hero" style="background-image: url(<?php echo $src[0]; ?> );">
     <div class="hero-text">
       <h2>
-        <?php the_field('header_text_1', 'option'); ?>
+        <?php the_field('hero_text_1', 'option'); ?>
         <span class="name"><?php bloginfo( 'name' ); ?></span>
-        <?php the_field('header_text_2', 'option'); ?>
+        <?php the_field('hero_text_2', 'option'); ?>
       </h2>
-      <button href="#about" class="button hero-button"><?php the_field('header_button_text', 'option'); ?></button>
+      <button href="#about" class="button hero-button"><?php the_field('hero_button_text', 'option'); ?></button>
     </div>
   </section>
 
