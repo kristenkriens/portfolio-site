@@ -12,11 +12,7 @@
 
 <body <?php body_class(); ?>>
 
-<?php global $post; ?>
-<?php
-$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
-?>
-<header style="background-image: url(<?php echo $src[0]; ?> );" class="front" id="home">
+<header class="front" id="home">
   <div class="navigation-bar">
     <div class="container">
       <div class="logo">
@@ -41,16 +37,4 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
     </div> <!-- /.container -->
   </div> <!-- /.navigation-bar -->
 
-  <div class="container">
-    <div class="header-text-outer">
-      <div class="header-text">
-        <h2><?php the_field('header_text_1', 'option'); ?></h2>
-        <h1><?php bloginfo( 'name' ); ?></h1>
-        <h2><?php the_field('header_text_2', 'option'); ?></h2>
-        <a href="#about"><div class="button header-button"><?php the_field('header_button_text', 'option'); ?></div></a>
-      </div>
-    </div>
-  </div> <!-- /.container -->
-
 </header><!--/.header-->
-

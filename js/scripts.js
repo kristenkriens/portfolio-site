@@ -3,10 +3,10 @@ $(function(){
 	$('body').fadeIn(500);
 
 	setTimeout(function(){
-		$('.header-text').addClass('animated fadeInUp');
+		$('.hero-text').addClass('animated fadeInUp');
 	}, 500);
 
-	$(window).on('scroll', function() {    
+	$(window).on('scroll', function() {
 		var scroll = $(window).scrollTop();
 
 		if (scroll > 0) {
@@ -64,13 +64,13 @@ $(function(){
 	        elementHeight = $(row).height(),
 	        containerTop = container.scrollTop(),
 	        containerHeight = container.height();
-	    
+
 	    return ((((elementTop - containerTop) + elementHeight) > 500) && ((elementTop - containerTop) < containerHeight));
 	}
 
 	$(window).scroll(function(){
 		if($(window).width() > 768){
-		   $('.subtitle, .about-text-top, .about-text-bottom, .about-image, .skills-icons, .blog-post, .portfolio-item, .button:not(.header-button), h3, .contact-left, .contact-right, input[type="submit"], #map').each(function(){
+		   $('.subtitle, .about-text-top, .about-text-bottom, .about-image, .skills-icons, .blog-post, .portfolio-item, .button:not(.hero-button), h3, .contact-left, .contact-right, input[type="submit"], #map').each(function(){
 		      if(isVisible($(this), $(window))){
 		      	$(this).addClass('animated fadeIn');
 		      }

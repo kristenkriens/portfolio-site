@@ -1,6 +1,20 @@
 <?php get_header('front');  ?>
 
 <div class="main home">
+  <?php global $post; ?>
+  <?php
+  $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+  ?>
+  <div class="hero" style="background-image: url(<?php echo $src[0]; ?> );">
+    <div class="hero-text">
+      <h2>
+        <?php the_field('header_text_1', 'option'); ?>
+        <span class="name"><?php bloginfo( 'name' ); ?></span>
+        <?php the_field('header_text_2', 'option'); ?>
+      </h2>
+      <button href="#about" class="button hero-button"><?php the_field('header_button_text', 'option'); ?></button>
+    </div>
+  </div>
 
   <?php // Start the loop ?>
   <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
