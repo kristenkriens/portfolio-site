@@ -9,7 +9,7 @@
 	        while(have_rows('social_links', 'options')) {
 	          the_row();
 	          ?>
-	          <a href="<?php the_sub_field('social_link_url', 'options'); ?>" target="_blank">
+	          <a href="<?php the_sub_field('social_link_url', 'options'); ?>" title="<?php the_sub_field('social_link_name', 'options'); ?>" target="_blank">
 	            <div class="footer-link">
 	              <i class="fa fa-<?php the_sub_field('social_link_name', 'options'); ?>" aria-hidden="true"></i>
 	            </div>
