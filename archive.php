@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="main">
+<main class="main">
   <div class="container">
-    <div class="content">
+    <section class="content">
 
       <?php if ( have_posts() ) the_post(); ?>
 
@@ -32,11 +32,11 @@
       get_template_part( 'loop', 'archive' );
       ?>
 
-    </div><!--/content-->
+    </section><!--/content-->
 
     <?php get_sidebar(); ?>
 
   </div> <!-- /.container -->
-</div> <!-- /.main -->
+</main> <!-- /.main -->
 
 <?php get_footer(); ?>

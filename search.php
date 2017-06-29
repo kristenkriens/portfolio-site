@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-<div class="main">
+<main class="main">
 	<div class="container">
 
-		<div class="content">
+		<section class="content">
 			<?php if ( have_posts() ) : ?>
 
 				<h2>Search Results for: <?php echo get_search_query(); ?></h2>
@@ -15,11 +15,11 @@
 				<?php get_search_form(); ?>
 
 			<?php endif; ?>
-		</div> <!-- /.content -->
+		</section> <!-- /.content -->
 
 		<?php get_sidebar(); ?>
 
 	</div><!-- /.container -->
-</div> <!-- /.main -->
+</main> <!-- /.main -->
 
 <?php get_footer(); ?>
