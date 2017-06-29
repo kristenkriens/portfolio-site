@@ -151,13 +151,13 @@
 
       <?php if ($blog->have_posts()): ?>
         <?php while($blog->have_posts()) : $blog->the_post(); ?>
-          <div class="<?php echo $post->post_name ?> blog-post">
+          <article class="<?php echo $post->post_name ?> blog-post">
 
             <h3 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
             <div class="entry-meta"><?php hackeryou_posted_on(); ?></div><!-- .entry-meta -->
 
             <?php the_excerpt() ?>
-          </div>
+          </article>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
       <?php endif; ?>
