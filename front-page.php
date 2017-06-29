@@ -1,11 +1,11 @@
 <?php get_header('front');  ?>
 
-<div class="main home">
+<main class="main home">
   <?php global $post; ?>
   <?php
   $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
   ?>
-  <div class="hero" style="background-image: url(<?php echo $src[0]; ?> );">
+  <section class="hero" style="background-image: url(<?php echo $src[0]; ?> );">
     <div class="hero-text">
       <h2>
         <?php the_field('header_text_1', 'option'); ?>
@@ -14,11 +14,11 @@
       </h2>
       <button href="#about" class="button hero-button"><?php the_field('header_button_text', 'option'); ?></button>
     </div>
-  </div>
+  </section>
 
   <?php // Start the loop ?>
   <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-    <div id="about">
+    <section id="about">
       <div class="container">
         <h2 class="subtitle"><span class="accent">About</span> Me</h2>
         <div class="about-image">
@@ -113,9 +113,9 @@
           </div>
         </div>
       </div> <!-- /.container -->
-    </div> <!-- /.about -->
+    </section> <!-- /.about -->
 
-    <div id="skills">
+    <section id="skills">
       <div class="container">
         <h2 class="grey-bg subtitle">My <span class="accent">Skills</span> & Tools</h2>
         <ul class="skills-icons">
@@ -134,11 +134,11 @@
           ?>
         </ul>
       </div> <!-- /.container -->
-    </div>
+    </section>
 
   <?php endwhile; // end the loop?>
 
-  <div id="blog">
+  <section id="blog">
     <div class="container">
       <h2 class="subtitle">Recent <span class="accent">Blog</span> Posts</h2>
       <?php $blog = new WP_Query(
@@ -164,10 +164,10 @@
 
       <button href="<?php echo get_permalink( get_option( 'page_for_posts' ) ) ?>" class="button">View All Posts</button>
     </div> <!-- /.container -->
-  </div>
+  </section>
 
 
-  <div id="portfolio">
+  <section id="portfolio">
     <div class="container">
       <h2 class="grey-bg subtitle">Check Out My <span class="accent">Portfolio</span></h2>
       <?php $portfolio = new WP_Query(
@@ -199,9 +199,9 @@
       <?php endif; ?>
 
     </div> <!-- /.container -->
-  </div>
+  </section>
 
-  <div id="contact">
+  <section id="contact">
     <div class="container">
       <h2 class="subtitle"><span class="accent">Contact</span> Me</h2>
       <h3>I'd love to hear from you! Email me at <a href="mailto:<?php the_field('my_email') ?>"><?php the_field('my_email') ?></a> or fill out the following form.</h3>
@@ -210,9 +210,9 @@
         <?php endif;?>
        </div>
     </div> <!-- /.container -->
-  </div>
-  <div id="map"></div>
+  </section>
+  <section id="map"></section>
 
-</div> <!-- /.main -->
+</main> <!-- /.main -->
 
 <?php get_footer(); ?>
