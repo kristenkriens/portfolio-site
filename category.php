@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="main">
+<main class="main">
   <div class="container">
-    <div class="content">
+    <section class="content">
       <h2>Category Archives: <?php single_cat_title(); ?></h2>
     	<?php
     		$category_description = category_description();
@@ -11,11 +11,11 @@
     	   get_template_part( 'loop', 'category' );
         ?>
 
-    </div> <!-- /.content -->
+    </section> <!-- /.content -->
 
     <?php get_sidebar(); ?>
 
   </div> <!-- /.container -->
-</div> <!-- /.main -->
+</main> <!-- /.main -->
 
 <?php get_footer(); ?>

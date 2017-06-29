@@ -1,33 +1,33 @@
 /* links */
 a {
-	color:$dark-color;
-	text-decoration:none;
-	transition:0.3s color, 0.3s background-color, 0.3s border;
+	color: $dark-color;
+	text-decoration: none;
+	transition: 0.3s color, 0.3s background-color, 0.3s border;
 	&:hover {
-		color:$accent-color;
+		color: $accent-color;
 	}
 }
 
 /* headings */
 h1, h2, h3, h4, h5, h5 {
-	margin:0;
-	color:$dark-color;
+	margin: 0;
+	color: $dark-color;
 }
 
 h2 {
-	font-size:35px;
+	font-size: 35px;
 }
 
 h3 {
-	font-size:25px;
+	font-size: 25px;
 }
 
 /* paragraphs */
 
 p {
 	line-height: 1.5;
-	margin-top:0;
-	margin-bottom:10px;
+	margin-top: 0;
+	margin-bottom: 10px;
 }
 
 /*blockquotes*/
@@ -70,7 +70,7 @@ pre {
 	background: $light-color;
 	padding: 10px;
 	border-radius: 4px;
-	font-family:$font-stack;
+	font-family: $font-stack;
 }
 
 
