@@ -1,10 +1,10 @@
 /*!
-* Theme Name: Kristen Kriens | Portfolio Site
-* Theme URI: http://kristenkriens.com;
-* Description: Kristen Kriens | Portfolio Site. Created by Kristen Kriens.
-* Version: 1.0
-* Author: Kristen Kriens
-* Author URI: http://kristenkriens.com
+* Theme Name:  Kristen Kriens | Portfolio Site
+* Theme URI:  http: //kristenkriens.com;
+* Description:  Kristen Kriens | Portfolio Site. Created by Kristen Kriens.
+* Version:  1.0
+* Author:  Kristen Kriens
+* Author URI:  http: //kristenkriens.com
 */
 
 @import 'normalize';
@@ -23,133 +23,133 @@ Default Styling
 */
 
 html, body {
-	height:100%;
+	height: 100%;
 }
 
 img {
-	max-width:100%;
+	max-width: 100%;
 }
 
 body {
-	color:$medium-dark-color;
-	font-family:$font-stack;
-	font-size:16px;
-	font-weight:300;
-	overflow-x:hidden;
-	@media (min-width:651px) {
-		overflow-y:visible!important;
+	color: $medium-dark-color;
+	font-family: $font-stack;
+	font-size: 16px;
+	font-weight: 300;
+	overflow-x: hidden;
+	@media (min-width: 651px) {
+		overflow-y: visible!important;
 	}
 }
 
 .container {
-	max-width:1200px;
-	margin:0 auto;
-	padding:15px;
-	display:flex;
-	flex-wrap:wrap;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 15px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 input, textarea, select {
-	font-weight:300;
-	color:$medium-color;
-	font-size:16px;
-	border:none;
-	outline:none;
-	padding:15px 20px;
-	width:100%;
-	transition:0.3s outline, 0.3s background-color;
+	font-weight: 300;
+	color: $medium-color;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	padding: 15px 20px;
+	width: 100%;
+	transition: 0.3s outline, 0.3s background-color;
 }
 
 textarea {
-	resize:none;
+	resize: none;
 }
 
 input[type="submit"], .button {
-	background-color:$accent-color;
-	padding:15px 25px;
-	color:white;
-	margin:0 auto;
+	background-color: $accent-color;
+	padding: 15px 25px;
+	color: white;
+	margin: 0 auto;
 	transition: background-color 0.3s;
-	text-transform:uppercase;
-	display:inline-block;
+	text-transform: uppercase;
+	display: inline-block;
 	&:hover {
-		background-color:$accent-color-hover;
-		color:white;
+		background-color: $accent-color-hover;
+		color: white;
 	}
 }
 
-::-webkit-input-placeholder {
-  color:$medium-color;
-}
-
-::-moz-placeholder {
-	color:$medium-color;
-}
-
-:-ms-input-placeholder {
-	color:$medium-color;
+:-webkit-input-placeholder {
+  color: $medium-color;
 }
 
 :-moz-placeholder {
-	color:$medium-color;
+	color: $medium-color;
+}
+
+:-ms-input-placeholder {
+	color: $medium-color;
+}
+
+:-moz-placeholder {
+	color: $medium-color;
 }
 
 
 /* ANIMATIONS */
 .animated {
-	
+
 }
 
 
 /* CONTACT FORM 7 */
 img.ajax-loader {
-	display:none;
+	display: none;
 }
 
 div.wpcf7-validation-errors {
-	border:none;
+	border: none;
 }
 
 div.wpcf7-response-output {
-	margin-top:25px;
-	margin-bottom:0;
-	font-weight:300;
-	width:100%;
-	text-align:center;
+	margin-top: 25px;
+	margin-bottom: 0;
+	font-weight: 300;
+	width: 100%;
+	text-align: center;
 }
 
 span.wpcf7-not-valid-tip {
-	display:none;
+	display: none;
 }
 
 
 /* 404 PAGE */
 .error404 {
-	text-align:center;
+	text-align: center;
 	.main {
-		min-height:calc(100vh - 70px);
-		display:flex;
-		flex-wrap:wrap;
-		align-items:center;
-		padding:15px;
+		min-height: calc(100vh - 70px);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		padding: 15px;
 		.container {
-			display:block;
+			display: block;
 			h2 {
-				font-size:75px;
+				font-size: 75px;
 			}
 			h3 {
-				font-size:30px;
-				margin-bottom:15px;
+				font-size: 30px;
+				margin-bottom: 15px;
 			}
 			a {
-				color:$accent-color;
+				color: $accent-color;
 				&:hover, &:active, &:focus {
-					opacity:0.8;
+					opacity: 0.8;
 				}
 			}
 			#searchform {
-				max-width:500px;
-				margin:25px auto 0 auto;
+				max-width: 500px;
+				margin: 25px auto 0 auto;
 			}
 		}
 	}
