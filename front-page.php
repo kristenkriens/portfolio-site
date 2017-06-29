@@ -47,7 +47,7 @@
                   while(have_rows('about_links_cv')) {
                     the_row();
                     ?>
-                    <a href="<?php the_sub_field('about_link_cv_url'); ?>" target="_blank">
+                    <a href="<?php the_sub_field('about_link_cv_url'); ?>" title="Kristen Kriens CV" target="_blank">
                       <div class="about-link">
                         <i class="fa fa-<?php the_sub_field('about_link_cv_name'); ?>" aria-hidden="true"></i>
                       </div>
@@ -64,7 +64,7 @@
                   while(have_rows('social_links', 'options')) {
                     the_row();
                     ?>
-                    <a href="<?php the_sub_field('social_link_url', 'options'); ?>" target="_blank">
+                    <a href="<?php the_sub_field('social_link_url', 'options'); ?>" title="<?php the_sub_field('social_link_name', 'options'); ?>" target="_blank">
                       <div class="about-link">
                         <i class="fa fa-<?php the_sub_field('social_link_name', 'options'); ?>" aria-hidden="true"></i>
                       </div>
@@ -162,7 +162,7 @@
         <?php wp_reset_postdata(); ?>
       <?php endif; ?>
 
-      <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ) ?>" class="button">View All Posts</a>
+      <button href="<?php echo get_permalink( get_option( 'page_for_posts' ) ) ?>" class="button">View All Posts</button>
     </div> <!-- /.container -->
   </div>
 
@@ -185,7 +185,7 @@
               <h3><?php the_title() ?></h3>
               <h4><?php the_field('skills_tools') ?></h4>
               <?php the_content() ?>
-              <a href="<?php echo get_field('link') ?>" target="_blank" class="button">View Live Site</a>
+              <button href="<?php echo get_field('link') ?>" target="_blank" class="button">View Live Site</button>
             </div>
             <div class="portfolio-item-image">
               <?php while( have_rows('images') ): the_row(); ?>
