@@ -189,7 +189,7 @@
 	width: 100%;
 	.icons {
 		margin: 30px 15px 15px 15px;
-		width: calc(20% - 30px);
+		width: calc(calc(100% / 6) - 30px);
 		text-align: center;
 		position: relative;
 		@media (max-width: 940px) {
