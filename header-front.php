@@ -16,11 +16,11 @@
   <div class="navigation-bar">
     <div class="container">
       <div class="logo">
-        <a href="<?php bloginfo( 'url' ) ?>">
+        <a href="<?php bloginfo( 'url' ) ?>" title="Kristen Kriens Logo">
           <?php $logo1 = get_field('first_logo', 'option');?>
-          <img src="<?php echo $logo1['url'] ?>" alt="<?php echo $logo1['alt'] ?>" title="<?php echo $logo1['title'] ?>">
+          <img src="<?php echo $logo1['url'] ?>" aria-hidden="true">
           <?php $logo2 = get_field('second_logo', 'option');?>
-          <img src="<?php echo $logo2['url'] ?>" alt="<?php echo $logo2['alt'] ?>" title="<?php echo $logo2['title'] ?>">
+          <img src="<?php echo $logo2['url'] ?>" aria-hidden="true">
         </a>
       </div>
       <div class="mobile not-clicked">
