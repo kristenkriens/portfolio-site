@@ -118,21 +118,21 @@
     <div id="skills">
       <div class="container">
         <h2 class="grey-bg subtitle">My <span class="accent">Skills</span> & Tools</h2>
-        <div class="skills-icons">
+        <ul class="skills-icons">
           <?php
             if(have_rows('skills_links')) {
               while(have_rows('skills_links')) {
                 the_row();
                 ?>
-                <div class="icons">
+                <li class="icons">
                   <i class="devicons devicons-<?php the_sub_field('skill_name'); ?>" aria-hidden="true"></i>
                   <p><?php the_sub_field('skill_name_2') ?></p>
-                </div>
+                </li>
                 <?php
               } // end while
             } // end if
           ?>
-        </div>
+        </ul>
       </div> <!-- /.container -->
     </div>
 
