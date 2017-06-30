@@ -100,18 +100,34 @@ button, .button {
 	color: $medium-color;
 }
 
-.screenreader {
-	position: absolute !important; /* Outside the DOM flow */
-  height: 1px; width: 1px; /* Nearly collapsed */
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE 7+ only support clip without commas */
-  clip: rect(1px, 1px, 1px, 1px); /* All other browsers */
+.accessible {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+	border: 0 none !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px;
 }
 
-
-/* ANIMATIONS */
-.animated {
-
+.skipnav {
+	&:focus, &:active {
+		position: absolute !important;
+		top: 5px !important;
+		left: 42% !important;
+		width: 16%;
+		background-color: #000;
+		padding: 10px;
+		color: #fff;
+		z-index: 9999;
+		text-align: center;
+		clip: inherit;
+		overflow: hidden;
+		border: 0 none !important;
+		width: auto !important;
+		height: auto !important;
+		margin: inherit;
+	}
 }
 
 

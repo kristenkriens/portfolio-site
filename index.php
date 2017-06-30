@@ -1,7 +1,7 @@
 <?php //index.php is the last resort template, if no other templates match ?>
 <?php get_header(); ?>
 
-<main class="main">
+<main id="main" class="main">
   <div class="container">
 
     <section class="content">

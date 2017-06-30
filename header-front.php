@@ -12,10 +12,12 @@
 
 <body <?php body_class(); ?>>
 
+<a href="#main" class="skipnav accessible">Skip to Main Content</a>
+
 <header class="front" id="home">
   <div class="navigation-bar">
     <div class="container">
-			<h1 class="screenreader"><?php  wp_title('|', true, 'right'); ?></h1>
+			<h1 class="accessible"><?php  wp_title('|', true, 'right'); ?></h1>
       <div class="logo">
         <a href="<?php bloginfo( 'url' ) ?>" title="Kristen Kriens Logo">
           <?php $logo1 = get_field('first_logo', 'option');?>

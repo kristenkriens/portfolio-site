@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="main">
+<main id="main" class="main">
   <div class="container">
   	 <h2>404</h2>
     <h3>Page Not Found</h3>

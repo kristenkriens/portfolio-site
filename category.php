@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="main">
+<main id="main" class="main">
   <div class="container">
     <section class="content">
       <h2>Category Archives: <?php single_cat_title(); ?></h2>

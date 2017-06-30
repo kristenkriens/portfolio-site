@@ -1,6 +1,6 @@
 <?php get_header('front');  ?>
 
-<main class="main home">
+<main id="main" class="main home">
   <?php global $post; ?>
   <?php
   $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
