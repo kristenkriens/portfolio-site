@@ -12,7 +12,7 @@
         <span class="name"><?php bloginfo( 'name' ); ?></span>
         <?php the_field('hero_text_2', 'option'); ?>
       </h2>
-      <button href="#about" class="button hero-button"><?php the_field('hero_button_text', 'option'); ?></button>
+      <a href="#about" class="button hero-button" role="button"><?php the_field('hero_button_text', 'option'); ?></a>
     </div>
   </section>
 
@@ -162,7 +162,7 @@
         <?php wp_reset_postdata(); ?>
       <?php endif; ?>
 
-      <button href="<?php echo get_permalink( get_option( 'page_for_posts' ) ) ?>" class="button">View All Posts</button>
+      <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ) ?>" class="button" role="button">View All Posts</a>
     </div> <!-- /.container -->
   </section>
 
@@ -185,7 +185,7 @@
               <h3><?php the_title() ?></h3>
               <h4><?php the_field('skills_tools') ?></h4>
               <?php the_content() ?>
-              <button href="<?php echo get_field('link') ?>" target="_blank" class="button">View Live Site</button>
+              <a href="<?php echo get_field('link') ?>" target="_blank" class="button" role="button">View Live Site</a>
             </div>
             <div class="portfolio-item-image">
               <?php while( have_rows('images') ): the_row(); ?>
