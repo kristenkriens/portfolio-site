@@ -47,7 +47,7 @@ header {
 		transition: 0.5s transform, 0.5s margin;
 	}
 	&:hover, &:active, &:focus {
-		img: last-of-type {
+		img:last-of-type {
 			transform: scaleX(-1);
 			margin-left: 5px;
 		}
