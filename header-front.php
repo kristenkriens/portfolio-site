@@ -18,14 +18,12 @@
   <div class="navigation-bar">
     <div class="container">
 			<h1 class="accessible"><?php  wp_title('|', true, 'right'); ?></h1>
-      <div class="logo">
-        <a href="<?php bloginfo( 'url' ) ?>" title="Kristen Kriens Logo">
-          <?php $logo1 = get_field('first_logo', 'option');?>
-          <img src="<?php echo $logo1['url'] ?>" aria-hidden="true">
-          <?php $logo2 = get_field('second_logo', 'option');?>
-          <img src="<?php echo $logo2['url'] ?>" aria-hidden="true">
-        </a>
-      </div>
+      <a href="<?php bloginfo( 'url' ) ?>" title="Kristen Kriens Logo" class="logo">
+        <?php $logo1 = get_field('first_logo', 'option');?>
+        <img src="<?php echo $logo1['url'] ?>" aria-hidden="true">
+        <?php $logo2 = get_field('second_logo', 'option');?>
+        <img src="<?php echo $logo2['url'] ?>" aria-hidden="true">
+      </a>
       <div class="mobile not-clicked">
         <div class="top-bar"></div>
         <div class="middle-bar"></div>
