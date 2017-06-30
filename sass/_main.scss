@@ -147,9 +147,9 @@
 		}
 	}
 	a {
-		color: $medium-dark-color;
+		color: $accent-color;
 		&:hover, &:active, &:focus {
-			color: $accent-color;
+			color: $accent-color-hover;
 		}
 	}
 }
