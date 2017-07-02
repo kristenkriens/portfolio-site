@@ -78,8 +78,9 @@ input[type="submit"], .button {
 	}
 }
 
-button, .button {
+button, .button, input[type="submit"] {
 	border: 0;
+	border-radius: 0;
 	outline: 0;
 	font-weight: 300;
 }
