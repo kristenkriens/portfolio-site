@@ -21,6 +21,9 @@ header {
 	width: 100%;
 	transition: 0.2s background-color;
 	z-index: 200;
+	@media (max-width: 650px) {
+		background-color: $header-footer-color;
+	}
 	&.solid {
 		background-color: $header-footer-color;
 	}
