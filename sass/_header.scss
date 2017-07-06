@@ -130,10 +130,8 @@ nav {
 				width: 50%;
 				height: calc((calc(100vh - 88px)) / 3);
 			}
-			&.active {
-				a {
-					color: $accent-color;
-				}
+			&.active a {
+				color: $accent-color;
 			}
 			a {
 				color:  $light-color;
@@ -153,7 +151,7 @@ nav {
 	#underline {
 		content: '';
 		position: absolute;
-		bottom: -5px;
+		bottom: -6px;
 		left: 0;
 		height: 3px;
 		width: 43px;
