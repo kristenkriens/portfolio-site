@@ -34,6 +34,7 @@
           'container' => false,
           'theme_location' => 'primary'
         )); ?>
+				<div id="underline"></div>
       </nav>
     </div> <!-- /.container -->
   </div> <!-- /.navigation-bar -->

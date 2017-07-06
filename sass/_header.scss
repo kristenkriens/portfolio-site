@@ -95,6 +95,7 @@ header {
 
 nav {
 	z-index: 100;
+	position: relative;
 	@media (max-width: 650px) {
 		width: 100%;
 	}
@@ -102,6 +103,7 @@ nav {
 		margin:  0;
 		padding:  0;
 		text-align: center;
+		position: relative;
 		@media (min-width: 651px) {
 			display: block!important;
 		}
@@ -131,14 +133,8 @@ nav {
 				width: 50%;
 				height: calc((calc(100vh - 88px)) / 3);
 			}
-			&.active {
-				border-bottom: 3px solid $accent-color;
-				@media (max-width: 650px) {
-					border-bottom: none;
-				}
-				a {
-					color: $accent-color;
-				}
+			&.active a {
+				color: $accent-color;
 			}
 			a {
 				color:  $light-color;
@@ -153,6 +149,22 @@ nav {
 					font-size: 20px;
 				}
 			}
+		}
+	}
+	#underline {
+		content: '';
+		position: absolute;
+		bottom: -6px;
+		left: 0;
+		height: 3px;
+		width: 43px;
+		background-color: $accent-color;
+		transition: left 0.15s ease, width 0.15s ease;
+		@media (min-width: 651px) {
+			display: block;
+		}
+		@media (max-width: 650px) {
+			display: none;
 		}
 	}
 }

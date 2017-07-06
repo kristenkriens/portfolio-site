@@ -21,6 +21,11 @@ $(function(){
 	        if (y >= $($(this).attr('href')).offset().top - 73) {
 	            $('nav li').not(this).removeClass('active');
 	            $(this).parent().addClass('active');
+
+						  var cssObj = {};
+						  cssObj.left = $(this).position().left;
+						  cssObj.width = $(this).outerWidth();
+							$("#underline").css(cssObj);
 	        }
 	    });
 	});
@@ -41,6 +46,7 @@ $(function(){
 
 	$('.mobile').on('click', function() {
 		$('.navigation-bar ul').slideToggle();
+		$('.navigation-bar').addClass('solid');
 		if($('.mobile').hasClass('not-clicked')) {
 			$('.mobile').removeClass('not-clicked').addClass('clicked');
 			$('body').css('overflow-y', 'hidden');
