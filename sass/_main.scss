@@ -320,7 +320,7 @@
 			@media (max-width: 800px) {
 				text-align: center;
 			}
-			h4:after {
+			ul:after {
 				right: 0;
 				left: auto;
 				@media (max-width: 800px) {
@@ -360,13 +360,18 @@
 		h3 {
 			color: $accent-color;
 		}
-		h4 {
-			font-weight: 300;
-			padding: 10px 0 25px 0;
+		ul {
+			list-style: none;
 			margin-bottom: 25px;
+			padding: 15px 0 25px 0;
 			position: relative;
-			color: $medium-dark-color;
-			font-size: 16px;
+			li {
+				font-size: 16px;
+				display: inline;
+				&:not(:last-of-type):after {
+					content: ' | ';
+				}
+			}
 			&:after {
 				content: "";
 				position: absolute;

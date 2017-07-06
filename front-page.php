@@ -183,7 +183,18 @@
           <div class="<?php echo $post->post_name ?> portfolio-item">
             <div class="portfolio-item-text">
               <h3><?php the_title() ?></h3>
-              <h4><?php the_field('skills_tools') ?></h4>
+              <ul>
+                <?php
+                  if(have_rows('skills_tools')) {
+                    while(have_rows('skills_tools')) {
+                      the_row();
+                      ?>
+                      <li><?php the_sub_field('skills_tools_item') ?></li>
+                      <?php
+                    } // end while
+                  } // end if
+                ?>
+              </ul>
               <?php the_content() ?>
               <button href="<?php echo get_field('link') ?>" target="_blank" class="button">View Live Site</button>
             </div>
