@@ -46,6 +46,7 @@ $(function(){
 
 	$('.mobile').on('click', function() {
 		$('.navigation-bar ul').slideToggle();
+		$('.navigation-bar').addClass('solid');
 		if($('.mobile').hasClass('not-clicked')) {
 			$('.mobile').removeClass('not-clicked').addClass('clicked');
 			$('body').css('overflow-y', 'hidden');
