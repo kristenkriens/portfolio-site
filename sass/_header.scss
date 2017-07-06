@@ -130,8 +130,13 @@ nav {
 				width: 50%;
 				height: calc((calc(100vh - 88px)) / 3);
 			}
-			&.active a {
-				color: $accent-color;
+			&.active {
+				.blog & {
+					border-bottom: 3px solid $accent-color;
+				}
+				a {
+					color: $accent-color;
+				}
 			}
 			a {
 				color:  $light-color;
