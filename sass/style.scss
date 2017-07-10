@@ -64,7 +64,7 @@ textarea {
 	resize: none;
 }
 
-input[type="submit"], .button {
+input[type="submit"], .button, button {
 	background-color: $accent-color;
 	padding: 15px 25px;
 	color: white;
@@ -72,17 +72,14 @@ input[type="submit"], .button {
 	transition: background-color 0.3s;
 	text-transform: uppercase;
 	display: inline-block;
-	&:hover {
-		background-color: $accent-color-hover;
-		color: white;
-	}
-}
-
-button, .button, input[type="submit"] {
 	border: 0;
 	border-radius: 0;
 	outline: 0;
 	font-weight: 300;
+	&:hover, &:active, &:focus {
+		background-color: $accent-color-hover;
+		color: white;
+	}
 }
 
 :-webkit-input-placeholder {
