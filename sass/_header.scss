@@ -161,7 +161,7 @@ nav {
 		height: 3px;
 		width: 43px;
 		background-color: $accent-color;
-		transition: left 0.15s ease, width 0.15s ease;
+		transition: left 0.15s linear, width 0.15s linear;
 		@media (min-width: 651px) {
 			display: block;
 		}
