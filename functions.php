@@ -53,7 +53,7 @@ function hackeryou_styles(){
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
-	wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700');
+	wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Lato:100,300,400,500,600,700');
 
 	wp_enqueue_style('devicon', 'https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css');
 
