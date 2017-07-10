@@ -349,7 +349,6 @@
 		font-size: 0;
 		display: flex;
 		flex-direction: column;
-		padding-bottom: 100px;
 		@media (max-width: 800px) {
 			padding-top: 0;
 			padding-bottom: 30px;
@@ -368,6 +367,7 @@
 			position: relative;
 			li {
 				font-size: 16px;
+				font-weight: 400;
 				display: inline;
 				line-height: 1.5;
 				&:not(:last-of-type):after {
@@ -405,8 +405,8 @@
 			font-size: 16px;
 			text-align: center;
 			@media (min-width: 801px) {
-				position: absolute;
-				bottom: 30px;
+				margin: 0;
+				float: left;
 			}
 			@media (min-width: 801px) and (max-width: 940px) {
 				left: 50%;
