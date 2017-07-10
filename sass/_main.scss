@@ -146,6 +146,9 @@
 			width: 500px;
 		}
 	}
+	p {
+		font-size: 14px;
+	}
 	a {
 		color: $accent-color;
 		&:hover, &:active, &:focus {
