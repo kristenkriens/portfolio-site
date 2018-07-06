@@ -76,6 +76,7 @@ input[type="submit"], .button, button {
 	border-radius: 0;
 	outline: 0;
 	font-weight: 300;
+	
 	&:hover, &:active, &:focus {
 		background-color: $accent-color-hover;
 		color: white;

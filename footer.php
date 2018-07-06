@@ -1,7 +1,7 @@
 <footer>
   <div class="container">
   	 <div class="footer-text">
-    	<p>&copy; Kristen Kriens <?php echo date('Y'); ?>. <?php the_field('footer_text', 'options'); ?></p>
+    	<p>&copy; Kristen Kriens <?php echo date('Y'); ?>. Inspired by the <a href="https://themeforest.net/item/craft-multipurpose-responsive-wordpress-theme/8728255" target="_blank">Craft</a> theme.</p>
     </div>
     <ul class="footer-links">
 	    <?php

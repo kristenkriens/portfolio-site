@@ -3,7 +3,7 @@ $(function(){
 	$('body').fadeIn(500);
 
 	setTimeout(function(){
-		$('.hero-text').addClass('animated fadeInUp');
+		$('.hero-text').addClass('animated fadeInUpBig');
 	}, 500);
 
 	$(window).on('scroll', function() {
@@ -76,9 +76,21 @@ $(function(){
 
 	$(window).scroll(function(){
 		if($(window).width() > 768){
-		   $('.subtitle, .about-text-top, .about-text-bottom, .about-image, .skills-icons, .blog-post, .portfolio-item, .button:not(.hero-button), h3, .contact-left, .contact-right, input[type="submit"], #map').each(function(){
+		   $('.subtitle, .about-text-top, .about-text-bottom, .about-image, .skills-icons, .button:not(.hero-button), h3, .contact-left, .contact-right, input[type="submit"]').each(function(){
 		      if(isVisible($(this), $(window))){
-		      	$(this).addClass('animated fadeIn');
+		      	$(this).addClass('animated fadeInUp');
+		      }
+		   });
+
+			 $('.portfolio-item:nth-of-type(odd), .blog-post:nth-of-type(odd)').each(function(){
+		      if(isVisible($(this), $(window))){
+		      	$(this).addClass('animated fadeInLeft');
+		      }
+		   });
+
+			 $('.portfolio-item:nth-of-type(even), .blog-post:nth-of-type(even)').each(function(){
+		      if(isVisible($(this), $(window))){
+		      	$(this).addClass('animated fadeInRight');
 		      }
 		   });
 		}

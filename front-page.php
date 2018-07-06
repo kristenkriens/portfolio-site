@@ -2,17 +2,14 @@
 
 <main id="main" class="main home">
   <?php global $post; ?>
-  <?php
-  $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
-  ?>
-  <section class="hero" style="background-image: url(<?php echo $src[0]; ?> );">
+  <?php $heroImage = get_field('hero_image'); ?>
+  <section class="hero" style="background-image: url(<?php echo $heroImage['url']; ?> );">
     <div class="hero-text">
       <h2>
-        <?php the_field('hero_text_1', 'option'); ?>
-        <span class="name"><?php bloginfo( 'name' ); ?></span>
-        <?php the_field('hero_text_2', 'option'); ?>
+        <span class="name"><?php the_field('hero_primary_text'); ?></span>
+        <?php the_field('hero_secondary_text'); ?>
       </h2>
-      <a href="#about" class="button hero-button" role="button"><?php the_field('hero_button_text', 'option'); ?></a>
+      <a href="#about" class="button hero-button" role="button"><?php the_field('hero_button_text'); ?></a>
     </div>
   </section>
 
@@ -24,38 +21,24 @@
         <div class="about-image">
           <?php $aboutImage = get_field('about_image'); ?>
           <img src="<?php echo $aboutImage['url'] ?>" alt="<?php echo $aboutImage['alt'] ?>" title="<?php echo $aboutImage['title'] ?>">
-          <?php the_field('about_image_credit'); ?>
+          <?php if( have_rows('about_image_credit') ): ?>
+            <?php while( have_rows('about_image_credit') ): the_row(); ?>
+              <div>Photo credit: <a href="<?php the_sub_field('link'); ?>" target="_blank"><?php the_sub_field('name'); ?></a></div>
+            <?php endwhile; ?>
+          <?php endif; ?>
         </div>
         <div class="about-text">
           <div class="about-text-top">
-            <?php
-              if(have_rows('about_text')) {
-                while(have_rows('about_text')) {
-                  the_row();
-                  ?>
-                    <p><?php the_sub_field('about_sentence'); ?></p>
-                  <?php
-                } // end while
-              } // end if
-            ?>
+            <?php the_field('about_text'); ?>
           </div>
           <div class="about-text-bottom">
             <div class="about-links-cv">
               <p>Download My CV</p>
-              <?php
-                if(have_rows('about_links_cv')) {
-                  while(have_rows('about_links_cv')) {
-                    the_row();
-                    ?>
-                    <a href="<?php the_sub_field('about_link_cv_url'); ?>" title="Kristen Kriens CV" target="_blank">
-                      <div class="about-link">
-                        <i class="fa fa-<?php the_sub_field('about_link_cv_name'); ?>" aria-hidden="true"></i>
-                      </div>
-                    </a>
-                    <?php
-                  } // end while
-                } // end if
-              ?>
+              <a href="<?php the_field('about_cv_link'); ?>" title="Kristen Kriens CV" target="_blank">
+                <div class="about-link">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </div>
+              </a>
             </div>
             <div class="about-links-social">
               <p>View My Profiles</p>
@@ -79,20 +62,11 @@
         <div class="about-text-bottom mobile-links">
           <div class="about-links-cv">
             <p>Download My CV</p>
-            <?php
-              if(have_rows('about_links_cv')) {
-                while(have_rows('about_links_cv')) {
-                  the_row();
-                  ?>
-                  <a href="<?php the_sub_field('about_link_cv_url'); ?>" target="_blank">
-                    <div class="about-link">
-                      <i class="fa fa-<?php the_sub_field('about_link_cv_name'); ?>"></i>
-                    </div>
-                  </a>
-                  <?php
-                } // end while
-              } // end if
-            ?>
+            <a href="<?php the_field('about_cv_link'); ?>" title="Kristen Kriens CV" target="_blank">
+              <div class="about-link">
+                <i class="fa fa-download" aria-hidden="true"></i>
+              </div>
+            </a>
           </div>
           <div class="about-links-social">
             <p>View My Profiles</p>
@@ -120,13 +94,13 @@
         <h2 class="grey-bg subtitle">My <span class="accent">Skills</span> & Tools</h2>
         <ul class="skills-icons">
           <?php
-            if(have_rows('skills_links')) {
-              while(have_rows('skills_links')) {
+            if(have_rows('skills')) {
+              while(have_rows('skills')) {
                 the_row();
                 ?>
                 <li class="icons">
-                  <i class="devicons devicons-<?php the_sub_field('skill_name'); ?>" aria-hidden="true"></i>
-                  <p><?php the_sub_field('skill_name_2') ?></p>
+                  <i class="devicons devicons-<?php the_sub_field('slug'); ?>" aria-hidden="true"></i>
+                  <p><?php the_sub_field('name'); ?></p>
                 </li>
                 <?php
               } // end while
@@ -196,13 +170,14 @@
                 ?>
               </ul>
               <?php the_content() ?>
-              <a href="<?php echo get_field('link') ?>" target="_blank" class="button" role="button">View Live Site</a>
+              <a href="<?php echo get_field('live_link') ?>" target="_blank" class="button" role="button">View Live Site</a>
+              <?php if( get_field('github_link') ): ?>
+                <a href="<?php echo get_field('github_link') ?>" target="_blank" class="button" role="button">View On GitHub</a>
+              <?php endif; ?>
             </div>
             <div class="portfolio-item-image">
-              <?php while( have_rows('images') ): the_row(); ?>
-                <?php $image = get_sub_field('image') ?>
-                <a href="<?php echo get_field('link') ?>" target="_blank"><img src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>" title="<?php echo $image['title'] ?>"></a>
-              <?php endwhile ?>
+              <?php $image = get_field('image') ?>
+              <a href="<?php echo get_field('link') ?>" target="_blank"><img src="<?php echo $image['sizes']['large'] ?>" alt="<?php echo $image['alt'] ?>" title="<?php echo $image['title'] ?>"></a>
             </div>
           </div>
         <?php endwhile; ?>
@@ -215,14 +190,14 @@
   <section id="contact">
     <div class="container">
       <h2 class="subtitle"><span class="accent">Contact</span> Me</h2>
-      <h3>I'd love to hear from you! Email me at <a href="mailto:<?php the_field('my_email') ?>"><?php the_field('my_email') ?></a> or fill out the following form.</h3>
+      <h3>I'd love to hear from you! Email me at <a href="mailto:<?php the_field('my_email') ?>"><?php the_field('contact_email') ?></a> or fill out the following form.</h3>
       <div class="contact-form">
         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Contact Form Widget Area") ) : ?>
         <?php endif;?>
        </div>
     </div> <!-- /.container -->
   </section>
-  <section id="map"></section>
+  <!-- <section id="map"></section> -->
 
 </main> <!-- /.main -->
 
