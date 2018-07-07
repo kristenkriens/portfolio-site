@@ -421,6 +421,9 @@
 		@media (max-width: 800px) {
 			width: 100%;
 		}
+		&:hover, &:focus, &:active {
+			opacity: 0.75;
+		}
 		img {
 			transition: 0.3s transform;
 			@media (min-width: 801px) and (max-width: 940px) {
