@@ -190,7 +190,7 @@
   <section id="contact">
     <div class="container">
       <h2 class="subtitle"><span class="accent">Contact</span> Me</h2>
-      <div class="h3"><?php the_field('copy') ?></div>
+      <div class="h3"><?php the_field('contact_copy') ?></div>
       <div class="contact-form">
         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Contact Form Widget Area") ) : ?>
         <?php endif;?>
