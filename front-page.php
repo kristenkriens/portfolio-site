@@ -190,7 +190,7 @@
   <section id="contact">
     <div class="container">
       <h2 class="subtitle"><span class="accent">Contact</span> Me</h2>
-      <h3>I'd love to hear from you! Email me at <a href="mailto:<?php the_field('my_email') ?>"><?php the_field('contact_email') ?></a> or fill out the following form.</h3>
+      <div class="h3"><?php the_field('copy') ?></div>
       <div class="contact-form">
         <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Contact Form Widget Area") ) : ?>
         <?php endif;?>
