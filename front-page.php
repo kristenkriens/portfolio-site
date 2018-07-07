@@ -170,9 +170,9 @@
                 ?>
               </ul>
               <?php the_content() ?>
-              <a href="<?php echo get_field('live_link') ?>" target="_blank" class="button" role="button">View Live Site</a>
+              <a href="<?php echo get_field('live_link') ?>" target="_blank" class="button" role="button">Live Site</a>
               <?php if( get_field('github_link') ): ?>
-                <a href="<?php echo get_field('github_link') ?>" target="_blank" class="button" role="button">View On GitHub</a>
+                <a href="<?php echo get_field('github_link') ?>" target="_blank" class="button" role="button">GitHub</a>
               <?php endif; ?>
             </div>
             <div class="portfolio-item-image">
