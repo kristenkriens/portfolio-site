@@ -4,7 +4,7 @@ $(function(){
 
 	setTimeout(function(){
 		$('.hero-text').addClass('animated fadeInUpBig');
-	}, 500);
+	}, 250);
 
 	$(window).on('scroll', function() {
 		var scroll = $(window).scrollTop();
