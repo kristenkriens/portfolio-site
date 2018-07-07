@@ -99,7 +99,7 @@
                 the_row();
                 ?>
                 <li class="icons">
-                  <i class="devicons devicons-<?php the_sub_field('slug'); ?>" aria-hidden="true"></i>
+                  <i class="devicon-<?php the_sub_field('slug'); ?>-plain" aria-hidden="true"></i>
                   <p><?php the_sub_field('name'); ?></p>
                 </li>
                 <?php
