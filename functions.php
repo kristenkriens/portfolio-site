@@ -86,13 +86,13 @@ function hackeryou_scripts() {
     true //load in footer
   );
 
-  wp_enqueue_script(
-    'googlemaps', //handle
-    'https://maps.googleapis.com/maps/api/js?key=AIzaSyD4s-1nQgl0-gBRcCuehT1J045Q4bmWn8M&callback=initMap', //source
-    false, //dependencies
-    null, // version number
-    true //load in footer
-  );
+  // wp_enqueue_script(
+  //   'googlemaps', //handle
+  //   'https://maps.googleapis.com/maps/api/js?key=AIzaSyD4s-1nQgl0-gBRcCuehT1J045Q4bmWn8M&callback=initMap', //source
+  //   false, //dependencies
+  //   null, // version number
+  //   true //load in footer
+  // );
 
   wp_enqueue_script(
     'scripts', //handle
