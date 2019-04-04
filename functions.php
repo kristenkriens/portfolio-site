@@ -106,7 +106,6 @@ add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
 
 
 /* Custom Title Tags */
-
 function hackeryou_wp_title( $title, $sep ) {
 	global $paged, $page;
 
@@ -185,16 +184,6 @@ add_filter( 'get_the_excerpt', 'hackeryou_custom_excerpt_more' );
  */
 function hackeryou_widgets_init() {
 	// Area 1, located at the top of the sidebar.
-	register_sidebar( array(
-		'name' => 'Primary Widget Area',
-		'id' => 'primary-widget-area',
-		'description' => 'The primary widget area',
-		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</li>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
 	register_sidebar( array(
 		'name' => 'Contact Form Widget Area',
 		'id' => 'contact-form-widget-area',
