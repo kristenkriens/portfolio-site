@@ -18,7 +18,7 @@ $(function(){
 	   var y = $(this).scrollTop();
 
 	    $('nav li > a').each(function (event) {
-	        if (y >= $($(this).attr('href')).offset().top - 103) {
+	        if (y >= $($(this).attr('href')).offset().top - 73) {
 	            $('nav li').not(this).removeClass('active');
 	            $(this).parent().addClass('active');
 
