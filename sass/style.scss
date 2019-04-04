@@ -49,7 +49,7 @@ body {
 
 input, textarea, select {
 	font-weight: 300;
-	color: $medium-color;
+	color: $medium-dark-color;
 	font-size: 16px;
 	border: none;
 	outline: none;
@@ -79,6 +79,20 @@ input[type="submit"], .button, button {
 		background-color: $accent-color-hover;
 		color: white;
 	}
+}
+
+.button-wrapper {
+	display: flex;
+	margin: 0 -10px;
+
+	.button {
+		width: 100%;
+		margin: 0 10px;
+	}
+}
+
+::placeholder {
+  color: $medium-color;
 }
 
 :-webkit-input-placeholder {
@@ -153,31 +167,44 @@ span.wpcf7-not-valid-tip {
 /* 404 PAGE */
 .error404 {
 	text-align: center;
+
 	.main {
 		min-height: calc(100vh - 70px);
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		padding: 15px;
+
 		.container {
 			display: block;
+
 			h2 {
 				font-size: 75px;
 			}
+
 			h3 {
 				font-size: 30px;
 				margin-bottom: 15px;
 			}
+
 			a {
 				color: $accent-color;
+
 				&:hover, &:active, &:focus {
 					opacity: 0.8;
 				}
 			}
+
 			#searchform {
 				max-width: 500px;
 				margin: 25px auto 0 auto;
 			}
 		}
 	}
+}
+
+
+/* RECAPTCHA v3 */
+.grecaptcha-badge {
+	visibility: hidden;
 }

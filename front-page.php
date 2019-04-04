@@ -141,10 +141,12 @@
                 ?>
               </ul>
               <?php the_content() ?>
-              <a href="<?php echo get_field('live_link') ?>" target="_blank" class="button" role="button">Live Site</a>
-              <?php if( get_field('github_link') ): ?>
-                <a href="<?php echo get_field('github_link') ?>" target="_blank" class="button" role="button">GitHub</a>
-              <?php endif; ?>
+              <div class="button-wrapper">
+                <a href="<?php echo get_field('live_link') ?>" target="_blank" class="button" role="button">Live Site</a>
+                <?php if( get_field('github_link') ): ?>
+                  <a href="<?php echo get_field('github_link') ?>" target="_blank" class="button" role="button">GitHub</a>
+                <?php endif; ?>
+              </div>
             </div>
             <div class="portfolio-item-image">
               <?php $image = get_field('image') ?>

@@ -446,7 +446,6 @@
 			text-align: center;
 
 			@media (min-width: 801px) {
-				margin: 0;
 				float: left;
 				left: 0;
 			}
@@ -464,7 +463,7 @@
 			transition: 0.3s transform;
 
 			&:hover, &:active, &:focus {
-				transform: scale(1.05);
+				transform: scale(1.025);
 			}
 
 			@media (min-width: 801px) and (max-width: 940px) {
@@ -487,11 +486,11 @@
 			width: 100%;
 
 			&:not([type="submit"]) {
+				background-color: $light-color;
 				border: 1px solid $medium-light-color;
 
 				&:focus, &:active {
 					border: 1px solid $accent-color;
-					background-color: transparent;
 				}
 			}
 		}
