@@ -22,7 +22,7 @@
 
 <a href="#main" class="skipnav accessible">Skip to Main Content</a>
 
-<header class="front" id="home">
+<header id="home">
   <div class="navigation-bar">
     <div class="container">
 			<h1 class="accessible"><?php  wp_title('|', true, 'right'); ?></h1>
@@ -42,7 +42,7 @@
           'container' => false,
           'theme_location' => 'primary'
         )); ?>
-				<div id="underline"></div>
+				<div class="underline"></div>
       </nav>
     </div> <!-- /.container -->
   </div> <!-- /.navigation-bar -->
