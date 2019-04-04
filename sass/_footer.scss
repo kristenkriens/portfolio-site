@@ -1,5 +1,6 @@
 footer {
 	background-color: $header-footer-color;
+
 	.container {
 		align-items: center;
 		padding: 15px 30px;
@@ -7,17 +8,21 @@ footer {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+
 		@media (max-width: 650px) {
 			flex-direction: column;
 			text-align: center;
 		}
+
 		p {
 			margin-bottom: 0;
 			color: $medium-color;
 			display: inline;
 		}
+
 		a {
 			color: white;
+
 			&:hover, &:active, &:focus {
 				color: $medium-color;
 			}
@@ -53,9 +58,11 @@ footer {
 			border-radius: 50%;
 			font-size: 18px;
 			text-align: center;
+
 			@media (max-width: 650px) {
 				margin: 5px;
 			}
+
 			&:hover, &:active, &:focus {
 				background-color: white;
 				border: 2px solid white;

@@ -1,4 +1,4 @@
-<?php get_header('front');  ?>
+<?php get_header();  ?>
 
 <main id="main" class="main home">
   <?php global $post; ?>
@@ -15,7 +15,7 @@
 
   <?php // Start the loop ?>
   <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-    <section id="about">
+    <section id="about" class="about grey-bg">
       <div class="container">
         <h2 class="subtitle"><span class="accent">About</span> Me</h2>
         <div class="about-image">
@@ -89,9 +89,9 @@
       </div> <!-- /.container -->
     </section> <!-- /.about -->
 
-    <section id="skills">
+    <section id="skills" class="skills">
       <div class="container">
-        <h2 class="grey-bg subtitle">My <span class="accent">Skills</span> & Tools</h2>
+        <h2 class="subtitle">My <span class="accent">Skills</span> & Tools</h2>
         <ul class="skills-icons">
           <?php
             if(have_rows('skills')) {
@@ -112,38 +112,9 @@
 
   <?php endwhile; // end the loop?>
 
-  <section id="blog">
+  <section id="portfolio" class="portfolio grey-bg">
     <div class="container">
-      <h2 class="subtitle">Recent <span class="accent">Blog</span> Posts</h2>
-      <?php $blog = new WP_Query(
-        array(
-          'post_type' => 'post',
-          'posts_per_page' => -1, // -1 means all posts
-          'order' => 'ASC'
-        )
-      ); ?>
-
-      <?php if ($blog->have_posts()): ?>
-        <?php while($blog->have_posts()) : $blog->the_post(); ?>
-          <article class="<?php echo $post->post_name ?> blog-post">
-
-            <h3 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-            <div class="entry-meta"><?php hackeryou_posted_on(); ?></div><!-- .entry-meta -->
-
-            <?php the_excerpt() ?>
-          </article>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-      <?php endif; ?>
-
-      <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ) ?>" class="button" role="button">View All Posts</a>
-    </div> <!-- /.container -->
-  </section>
-
-
-  <section id="portfolio">
-    <div class="container">
-      <h2 class="grey-bg subtitle">Check Out My <span class="accent">Portfolio</span></h2>
+      <h2 class="subtitle">Check Out My <span class="accent">Portfolio</span></h2>
       <?php $portfolio = new WP_Query(
         array(
           'post_type' => 'portfolio',
@@ -187,7 +158,7 @@
     </div> <!-- /.container -->
   </section>
 
-  <section id="contact">
+  <section id="contact" class="contact">
     <div class="container">
       <h2 class="subtitle"><span class="accent">Contact</span> Me</h2>
       <div class="h3"><?php the_field('contact_copy') ?></div>
